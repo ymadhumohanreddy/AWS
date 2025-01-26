@@ -1,0 +1,24 @@
+Copy the public ip address of the instance
+and open git-bash and go to downloads folder where keypair is present and ssh -i windows-key.pem ubuntu@publicipaddress
+Create html file using vim index.html
+copy this
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>This is my very first ec2 instance</h1>
+<p>Congrats on deploying the application on ec2 instance</p>
+
+</body>
+</html>  
+
+and esc->wq
+
+python3 -m http.server 8000
+
+And go to instance and change the security inbound rules (custom tcp 8000 Anywhere)
+
+and copy the public ip address and http://publicipaddress:8000
+
+CONGRATS!!
